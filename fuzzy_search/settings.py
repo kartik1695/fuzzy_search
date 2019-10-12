@@ -73,24 +73,24 @@ TEMPLATES = [
 WSGI_APPLICATION = 'fuzzy_search.wsgi.application'
 
 
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default=dj_database_url.config('DATABASE_URL')
-#     )
-# }
+DATABASES = {
+    'default': dj_database_url.config(
+        default=dj_database_url.config('DATABASE_URL')
+    )
+}
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'fuzzy',
-        'USER' : 'postgres',
-        'PASSWORD': 'kartik1695',
-        'HOST': 'localhost',
-        'PORT': '5432',
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'fuzzy',
+#         'USER' : 'postgres',
+#         'PASSWORD': 'kartik1695',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
 
-    }
-}
+#     }
+# }
 
 # DATABASES = {
 #     'default': {
