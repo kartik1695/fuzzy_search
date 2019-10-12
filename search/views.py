@@ -6,7 +6,7 @@ import json
 import requests
 
 def search_function(request):
-	search_word = request.GET["search"]
+	search_word = request.GET["word"]
 	# print(type(search_word))
 
 	exact_word = Data.objects.filter(word = search_word)
