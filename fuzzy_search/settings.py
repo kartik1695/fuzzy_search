@@ -72,19 +72,24 @@ TEMPLATES = [
 WSGI_APPLICATION = 'fuzzy_search.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'fuzzy',
-        'USER' : 'postgres',
-        'PASSWORD': 'kartik1695',
-        'HOST': 'localhost',
-        'PORT': '5432',
-
-    }
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
 }
+# Database
+# # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'fuzzy',
+#         'USER' : 'postgres',
+#         'PASSWORD': 'kartik1695',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+
+#     }
+# }
 
 # DATABASES = {
 #     'default': {
@@ -126,7 +131,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
